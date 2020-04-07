@@ -5,7 +5,7 @@ A Paper wallet for Idena (DNA) Crypto currency.
 In current troubled times, wearing a mask when going out is more necessary than ever ;)
 
 
-## Current state
+## Current state
 
 Functional, follows current standards for HD wallet derivation.
 
