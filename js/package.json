@@ -1,0 +1,46 @@
+{
+  "name": "dnamask",
+  "version": "0.0.1",
+  "description": "Idena HD Paper wallet",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "bip39": "^3.0.2",
+    "easyqrcodejs": "^3.2.0",
+    "ethereum-hdwallet": "0.0.26",
+    "lodash": "^4.17.15"
+  },
+  "devDependencies": {
+    "css-loader": "^3.2.0",
+    "file-loader": "^4.2.0",
+    "html-webpack-plugin": "^3.2.0",
+    "http-server": "^0.12.1",
+    "jest": "^24.9.0",
+    "style-loader": "^1.0.0",
+    "webpack": "^4.40.2",
+    "webpack-cli": "^3.3.9"
+  },
+  "scripts": {
+    "build": "webpack --display-modules",
+    "serve": "http-server dist",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AngainorDev/DnaMask.git"
+  },
+  "keywords": [
+    "Idena",
+    "Crypto-currency",
+    "blockchain",
+    "HD wallet"
+  ],
+  "author": "Angainor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AngainorDev/DnaMask/issues"
+  },
+  "homepage": "https://github.com/AngainorDev/DnaMask#readme"
+}

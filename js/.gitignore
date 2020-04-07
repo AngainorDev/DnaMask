@@ -1,0 +1,8 @@
+node_modules/
+npm-debug.log
+package-lock.json
+yarn.lock
+.vscode/*
+!dist/index.html
+!dist/main.js
+!dist/report.html

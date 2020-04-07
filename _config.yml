@@ -1,0 +1,21 @@
+theme: jekyll-theme-hacker
+
+title: Angainor Dev - DnaMask Idena Paper Wallet
+locale: en_US
+
+owner:
+  name: Angainor Dev
+  twitter: angainor15
+  github: AngainorDev
+
+links:
+  section_1:
+    - title: Home
+      url: /
+      key_trigger: 1
+    - title: Doc
+      url: /doc
+      key_trigger: 2
+    - title: Paper wallets
+      url: /doc/paperwallet
+      key_trigger: 3
