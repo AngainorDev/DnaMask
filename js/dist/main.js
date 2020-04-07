@@ -2731,7 +2731,7 @@ eval("module.exports = __webpack_require__.p + \"2ec054a275372aa7bb2423ff725790c
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("module.exports = __webpack_require__.p + \"a62f4afa50868b261725acbedeab2df4.png\";\n\n//# sourceURL=webpack:///./src/img/pdna512.png?");
+eval("module.exports = __webpack_require__.p + \"d82b74b595b6df65d3191e30f5ed2d27.png\";\n\n//# sourceURL=webpack:///./src/img/pdna512.png?");
 
 /***/ }),
 
