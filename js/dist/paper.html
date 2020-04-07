@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>DNA Mask - Idena Paper Wallet by Angainor Dev</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+
+
+  <body>
+  <div class="container">
+
+      <div id="hide">
+
+      <div class="row" style="margin-bottom:10px;margin-top:10px;">
+        <div class="col-6">
+          <a href="index.html" class="btn btn-success">HD Wallet</a>
+          <a href="paper.html" class="btn btn-warning">Paper Wallet</a>
+        </div>
+      </div>
+
+
+    <h1>Dna Mask - Idena Paper Wallet</h1>
+      <div class="row">
+        <div class="col-6 col-md-6 col-xl-6">
+          <form>
+           <label for="pk-input">Private key (Nodekey)</label>
+            <input type="TEXT" class="form-control" id="pk-input" placeholder="" aria-label="Private Key" autocomplete="off" data-docs-version="4.3">
+              <b>Or</b>
+           <label for="pc-input">Paper wallet code</label>
+            <input type="TEXT" class="form-control" id="pc-input" placeholder="" aria-label="Paper Code" autocomplete="off" data-docs-version="4.3">
+           <label for="wallet_template">Wallet template</label>
+            <select class="form-control" name="template" id="wallet_template">
+            </select>
+            <button class="btn btn-primary" type="button" id="generate_paper">Make Paper Wallet</button>
+          </form>
+        </div>
+        <div class="col-6 col-md-6 col-xl-6">
+          <img id="preview_img" />
+        </div>
+      </div>
+    <br />&nbsp;<br/>
+      <div class="row">
+        <div class="col-12 col-md-4 col-xl-6">
+            Idena Paper Wallet courtesy of Angainor <br/>
+            <small>MIT Licence: do what you want, provided you keep the credits.</small>
+        </div>
+      </div>
+    <br />&nbsp;<br/>
+    </div>   <!-- hide -->
+    <div class="row" id="output">
+
+    </div>
+ </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script -->
+
+  <script type="text/javascript" src="paper.js"></script></body>
+</html>
