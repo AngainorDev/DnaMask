@@ -90,14 +90,23 @@ function generate_addresses() {
     let extraClass=''
     let ids = []
     let i = 0
-    const mywallet = hdwallet.derive(`m/44'/60'/0'/0`)
+    const eth = document.querySelector("#eth").checked
     const robot = document.querySelector("#robot").checked
-    console.log(robot)
-
+    let mywallet
+    let path = ''
+    if (eth) {
+        mywallet = hdwallet.derive(`m/44'/60'/0'/0`)
+    } else {
+        mywallet = hdwallet.derive(`m/44'/515'/0'/0`)
+    }
     for (i=1; i<=count; i++) {
         //derived = MasterKey.derive(i)
         const derived = mywallet.derive(i)
-        const path = `m/44'/60'/0'/0/`+i.toString()
+        if (eth) {
+            path = `m/44'/60'/0'/0/`+i.toString()
+        } else {
+            path = `m/44'/515'/0'/0/`+i.toString()
+        }
         const papercode = bip39.entropyToMnemonic(derived.getPrivateKey().toString('hex'))
         if (robot) {
             content += getKeyRowWithQRAndRobot(i, path, derived.getPrivateKey().toString('hex'),

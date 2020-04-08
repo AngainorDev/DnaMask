@@ -21,7 +21,11 @@ Selectable wallet template, see the doc on how to submit your own templates to b
 ## Roadmap
 
 - Improve GUI
+- Add offline message signing
+- Add offline signed tx generation
+
 - Trezor integration
+- Browser extension was suggested
 
 
 ## Donation address
