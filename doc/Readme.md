@@ -17,7 +17,10 @@ Auto build Github pages version: [https://angainordev.github.io/DnaMask/js/dist/
 
 ## Derivation mechanism
 
-WIP
+BIP 39 - BIP44 - SLIP-0044
+
+Coin type 515 was registered, PR:  
+https://github.com/satoshilabs/slips/pull/913
 
 ## Paper codes
 
@@ -31,7 +34,8 @@ WIP
 
 ## Changelog
 
-- V0.1: Initial commit, fully functional
+- v0.2: Use 515 as coin type by default
+- v0.1: Initial commit, fully functional
 
 ## Donation address
 
