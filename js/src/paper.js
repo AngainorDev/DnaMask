@@ -79,8 +79,13 @@ function generate_paper() {
         alert("Fill only *one* of Private Key or Paper Code")
         return
     }
+    const bip39info = document.querySelector("#bip39")
     if (paperCode != '') {
         privateKey = bip39.mnemonicToEntropy(paperCode)
+         bip39info.innerHTML = '';
+    } else {
+      // we got a privatekey
+        bip39info.innerHTML = '<form style="margin-top:20px; margin-bottom:20px; "><label for="words">Paper wallet code</label><br/><textarea name="words" style="width:100%; height:auto;">'+bip39.entropyToMnemonic(privateKey)+"</textarea></form>"
     }
     const address = ethWallet.fromPrivateKey(Buffer.from(privateKey, 'hex')).getAddressString()
     //console.log(address)

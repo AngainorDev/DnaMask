@@ -34,6 +34,7 @@ WIP
 
 ## Changelog
 
+- v0.3: Display bip39 mnemonic when creating a paperwallet from nodekey
 - v0.2: Use 515 as coin type by default
 - v0.1: Initial commit, fully functional
 
