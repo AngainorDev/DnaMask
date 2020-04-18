@@ -99,7 +99,7 @@ function generate_addresses() {
     } else {
         mywallet = hdwallet.derive(`m/44'/515'/0'/0`)
     }
-    for (i=1; i<=count; i++) {
+    for (i=0; i<count; i++) {
         //derived = MasterKey.derive(i)
         const derived = mywallet.derive(i)
         if (eth) {

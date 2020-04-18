@@ -1,6 +1,6 @@
 {
   "name": "dnamask",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "description": "Idena HD Paper wallet",
   "main": "index.js",
   "directories": {

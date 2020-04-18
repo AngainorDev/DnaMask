@@ -22,6 +22,9 @@ BIP 39 - BIP44 - SLIP-0044
 Coin type 515 was registered, PR:  
 https://github.com/satoshilabs/slips/pull/913
 
+You can use coin type 60 (eth) for tests but this is highly discouraged.  
+A checkbox is available on the HD wallet generation page.
+
 ## Paper codes
 
 Paper codes allow to regenerate individual wallets without the master word pass.
@@ -34,6 +37,7 @@ WIP
 
 ## Changelog
 
+- v0.4: Display address index 0 - index was previously starting at 1.
 - v0.3: Display bip39 mnemonic when creating a paperwallet from nodekey
 - v0.2: Use 515 as coin type by default
 - v0.1: Initial commit, fully functional
