@@ -18,11 +18,17 @@ Paper wallets [https://angainordev.github.io/DnaMask/doc/paperwallet](https://an
 
 Selectable wallet template, see the doc on how to submit your own templates to be included.
 
+**New:**
+Added offline signed tx generation
+
+## Offline signing feature
+
+Made possible with [Idena.Today](https://idena.today)'s team help and dnaurl protocol, see [https://angainordev.github.io/DnaMask/doc/offline](https://angainordev.github.io/DnaMask/doc/offline)
+
 ## Roadmap
 
 - Improve GUI
 - Add offline message signing
-- Add offline signed tx generation
 
 - Trezor integration
 - Browser extension was suggested

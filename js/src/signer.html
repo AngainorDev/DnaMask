@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>DNA Mask - Idena Paper Wallet by Angainor Dev</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+
+
+  <body>
+  <div class="container">
+
+      <div id="hide">
+
+      <div class="row" style="margin-bottom:10px;margin-top:10px;">
+        <div class="col-6">
+          <a href="index.html" class="btn btn-success">HD Wallet</a>
+          <a href="paper.html" class="btn btn-success">Paper Wallet</a>
+          <a href="signer.html" class="btn btn-warning">Offline Signer</a>
+        </div>
+      </div>
+
+
+    <h1>Dna Mask - Idena Offline signer</h1>
+      <div class="row">
+        <div class="col-6 col-md-6 col-xl-6">
+          <form>
+              <b>Note:</b>Default values temporarily as test vectors. test vector seed, not to be used ever!<br/>
+           <label for="word-input">Seed (BIP39 word code or paperwallet  code)</label>
+            <input type="TEXT" class="form-control" id="word-input" placeholder="" aria-label="Word Code" autocomplete="off" data-docs-version="4.3" value="abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon about">
+               <br />
+           <label for="code-type">This is a...</label>
+            <select class="form-control" name="template" id="code-type">
+                <option value="HD" selected>HD Wallet Seed</option>
+                <option value="Paper">Paper wallet</option>
+            </select>
+              <div id="hd-index-option">
+                <br />
+                <label for="hd-index">HD Wallet Index</label>
+                <input type="NUMBER" class="form-control" id="hd-index" placeholder="" aria-label="HD Wallet Index" autocomplete="off" data-docs-version="4.3" value="0">
+                <br />
+                <label for="eth">Use ETH coin type 60 for derive path (NOT recommended, kept for compatibility)</label>
+                <input type="checkbox" id="eth" name="eth" aria-label="Use ETH coin type" value="Eth compatibility" />
+              </div>
+              <hr/>
+           <label for="dna-url">Paste your raw DnaUrl</label>
+            <input type="TEXT" class="form-control" id="dna-url" placeholder="dna://raw/..." aria-label="DnaUrl" autocomplete="off" data-docs-version="4.3" value="dna://raw/1/41/0/0x02bD24aD70C2335F5B3FE47bfcE8eD6e39D447CB/1/10000//4gw/X1xxavvWwXa">
+              <br />
+            <button class="btn btn-primary" type="button" id="generate_tx">Show Transaction details (1/2)...</button>
+          </form>
+        </div>
+        <div class="col-6 col-md-6 col-xl-6">
+            <div id="tx-details" style="display:none;">
+                The matching Idena address is <br/><b><span id="my-address">0x</span></b><br />
+                Make sure this is the address you want to sign with.
+                <hr />
+                Transaction you'll be signing:<br/>
+                To <b><span id="tx-to">-</span></b><br/>
+                Amount <b><span id="tx-amount">-</span></b> DNA<br/>
+                Data <b><span id="tx-data">-</span></b>
+                <hr />
+                <span id="error-msg"></span>
+                <button class="btn btn-primary" type="button" id="sign_tx">Sign that tx (2/2)</button>
+            </div>
+            <div id="tx-error-details" style="display:none;">
+            </div>
+            <br />
+            <div id="output"></div>
+
+        </div>
+
+      </div>
+    <br />&nbsp;<br/>
+      <div class="row">
+        <div class="col-12 col-md-4 col-xl-6">
+            Idena Paper Wallet courtesy of Angainor <br/>
+            <b>Note:</b> This is just a proof of concept, not a clean and final app. It's working, offline, safe to use, but still we'll happily accept all GUI, UX and code improvements. That's why it's open sourced!<br/>
+            <small>MIT Licence: do what you want, provided you keep the credits.</small>
+        </div>
+      </div>
+    <br />&nbsp;<br/>
+    </div>   <!-- hide -->
+
+ </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script -->
+
+  </body>
+</html>

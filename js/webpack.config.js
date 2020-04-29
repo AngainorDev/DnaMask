@@ -4,8 +4,12 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   entry: {main : ["./src/index.js"],
-          paper: ["./src/paper.js"]} ,
+          paper: ["./src/paper.js"] ,
+          signer: ["./src/signer.js"]} ,
   target: "web",
+  devServer: {
+    contentBase: './dist',
+  },
   plugins: [
     new webpack.IgnorePlugin(/^\.\/wordlists\/(?!english)/, /bip39\/src$/),
     new HtmlWebpackPlugin({
@@ -17,6 +21,11 @@ module.exports = {
       filename: "paper.html",
       template: "src/paper.html",
       chunks: ['paper']
+    }),
+    new HtmlWebpackPlugin({
+      filename: "signer.html",
+      template: "src/signer.html",
+      chunks: ['signer']
     })
   ],
  module: {

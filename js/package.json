@@ -1,6 +1,6 @@
 {
   "name": "dnamask",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Idena HD Paper wallet",
   "main": "index.js",
   "directories": {
@@ -8,8 +8,10 @@
   },
   "dependencies": {
     "bip39": "^3.0.2",
+    "default-passive-events": "^1.0.10",
+    "dnaurl": "^0.0.6",
     "easyqrcodejs": "^3.2.0",
-    "ethereum-hdwallet": "0.0.26",
+    "ethereum-hdwallet": "^0.0.26",
     "lodash": "^4.17.15"
   },
   "devDependencies": {
@@ -21,10 +23,12 @@
     "jest": "^24.9.0",
     "style-loader": "^1.0.0",
     "webpack": "^4.40.2",
-    "webpack-cli": "^3.3.9"
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.10.3"
   },
   "scripts": {
     "build": "webpack --display-modules",
+    "start": "webpack-dev-server --open",
     "serve": "http-server dist",
     "test": "jest"
   },

@@ -29,6 +29,10 @@ A checkbox is available on the HD wallet generation page.
 
 Paper codes allow to regenerate individual wallets without the master word pass.
 
+## Offline signing
+
+Made possible with [Idena.Today](https://idena.today)'s team help and dnaurl protocol, see [https://angainordev.github.io/DnaMask/doc/offline](https://angainordev.github.io/DnaMask/doc/offline)
+
 ## Tests 
 
 See test directory for API and sample use.
@@ -37,6 +41,7 @@ WIP
 
 ## Changelog
 
+- v0.5: Add offline signed tx generation
 - v0.4: Display address index 0 - index was previously starting at 1.
 - v0.3: Display bip39 mnemonic when creating a paperwallet from nodekey
 - v0.2: Use 515 as coin type by default
