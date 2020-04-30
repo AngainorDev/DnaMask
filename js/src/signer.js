@@ -79,9 +79,9 @@ function sign_tx(e) {
       //expect(hash.toString('hex')).toBe("df19875a7f76deb535fc2bce4fc4536270ed9c3a1f422e1c0950234bac7ddcdc")
       const sig2 = ecsign(hash, privateKey)
       //console.log(sig2)
-      const joinedSignature = Buffer.concat([sig2.r, sig2.s, Buffer.from([0])]);
+      const joinedSignature = Buffer.concat([sig2.r, sig2.s, Buffer.from([sig.v - 27])]);
       //console.log(joinedSignature.toString('hex'))
-      // expect(joinedSignature.toString('hex')).toBe("df3a8b3ed0801452f051cc8f28cefbe80d6fe7d26a09803ff5b7a3c0d42440a70d5bdb718eb12c627708af81af08607fe01ae63a4732880cf0dbe75175007ce000")
+      // expect(joinedSignature.toString('hex')).toBe("df3a8b3ed0801452f051cc8f28cefbe80d6fe7d26a09803ff5b7a3c0d42440a70d5bdb718eb12c627708af81af08607fe01ae63a4732880cf0dbe75175007ce001")
       const sigTransaction = {
         "txid": document.querySelector("#dna-url").value.split("/").slice(-1), // encoded checksum of tx to sign
         "signature": joinedSignature.toString('hex') // hex

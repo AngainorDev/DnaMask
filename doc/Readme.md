@@ -41,6 +41,7 @@ WIP
 
 ## Changelog
 
+- v0.6: Fix test vector and test case with correct sig.recoveryParam
 - v0.5: Add offline signed tx generation
 - v0.4: Display address index 0 - index was previously starting at 1.
 - v0.3: Display bip39 mnemonic when creating a paperwallet from nodekey

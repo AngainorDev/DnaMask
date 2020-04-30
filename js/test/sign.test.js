@@ -34,16 +34,18 @@ describe("DNA Reference", () => {
       const sig = key.signDigest(hash);
       expect(sig.r).toBe("0xdf3a8b3ed0801452f051cc8f28cefbe80d6fe7d26a09803ff5b7a3c0d42440a7")
       expect(sig.s).toBe("0x0d5bdb718eb12c627708af81af08607fe01ae63a4732880cf0dbe75175007ce0")
-
+      //console.log(sig)
       const joinedSignature = Buffer.concat([
         Buffer.from(sig.r.substr(2), 'hex'),
         Buffer.from(sig.s.substr(2), 'hex'),
-        Buffer.from([0]),
+        Buffer.from([sig.recoveryParam]),  // And not 0, see https://github.com/idena-network/idena-go/issues/359#issuecomment-611418937
       ]);
-      expect(joinedSignature.toString('hex')).toBe("df3a8b3ed0801452f051cc8f28cefbe80d6fe7d26a09803ff5b7a3c0d42440a70d5bdb718eb12c627708af81af08607fe01ae63a4732880cf0dbe75175007ce000")
+      //expect(joinedSignature.toString('hex')).toBe("df3a8b3ed0801452f051cc8f28cefbe80d6fe7d26a09803ff5b7a3c0d42440a70d5bdb718eb12c627708af81af08607fe01ae63a4732880cf0dbe75175007ce000")
+      expect(joinedSignature.toString('hex')).toBe("df3a8b3ed0801452f051cc8f28cefbe80d6fe7d26a09803ff5b7a3c0d42440a70d5bdb718eb12c627708af81af08607fe01ae63a4732880cf0dbe75175007ce001")
       const res = [...data, joinedSignature];
       const rlpResult = RLP.encode(res);
-      expect(rlpResult.toString('hex')).toBe("f8610129809402bd24ad70c2335f5b3fe47bfce8ed6e39d447cb018227108080b841df3a8b3ed0801452f051cc8f28cefbe80d6fe7d26a09803ff5b7a3c0d42440a70d5bdb718eb12c627708af81af08607fe01ae63a4732880cf0dbe75175007ce000")
+      //expect(rlpResult.toString('hex')).toBe("f8610129809402bd24ad70c2335f5b3fe47bfce8ed6e39d447cb018227108080b841df3a8b3ed0801452f051cc8f28cefbe80d6fe7d26a09803ff5b7a3c0d42440a70d5bdb718eb12c627708af81af08607fe01ae63a4732880cf0dbe75175007ce000")
+      expect(rlpResult.toString('hex')).toBe("f8610129809402bd24ad70c2335f5b3fe47bfce8ed6e39d447cb018227108080b841df3a8b3ed0801452f051cc8f28cefbe80d6fe7d26a09803ff5b7a3c0d42440a70d5bdb718eb12c627708af81af08607fe01ae63a4732880cf0dbe75175007ce001")
     })
 })
 
@@ -71,12 +73,12 @@ describe("DNA Mask", () => {
       const derived0 = mywallet.derive(0)
       expect(derived0.getAddress().toString('hex')).toBe("9858effd232b4033e47d90003d41ec34ecaeda94")
       const sig2 = ecsign(hash, derived0.getPrivateKey())
-      //console.log(sig2)
-      const joinedSignature = Buffer.concat([sig2.r, sig2.s, Buffer.from([0])]);
-      expect(joinedSignature.toString('hex')).toBe("df3a8b3ed0801452f051cc8f28cefbe80d6fe7d26a09803ff5b7a3c0d42440a70d5bdb718eb12c627708af81af08607fe01ae63a4732880cf0dbe75175007ce000")
+      console.log(sig2)
+      const joinedSignature = Buffer.concat([sig2.r, sig2.s, Buffer.from([sig2.v - 27])]);
+      expect(joinedSignature.toString('hex')).toBe("df3a8b3ed0801452f051cc8f28cefbe80d6fe7d26a09803ff5b7a3c0d42440a70d5bdb718eb12c627708af81af08607fe01ae63a4732880cf0dbe75175007ce001")
       const res = [...data, joinedSignature];
       const rlpResult = RLP.encode(res);
-      expect(rlpResult.toString('hex')).toBe("f8610129809402bd24ad70c2335f5b3fe47bfce8ed6e39d447cb018227108080b841df3a8b3ed0801452f051cc8f28cefbe80d6fe7d26a09803ff5b7a3c0d42440a70d5bdb718eb12c627708af81af08607fe01ae63a4732880cf0dbe75175007ce000")
+      expect(rlpResult.toString('hex')).toBe("f8610129809402bd24ad70c2335f5b3fe47bfce8ed6e39d447cb018227108080b841df3a8b3ed0801452f051cc8f28cefbe80d6fe7d26a09803ff5b7a3c0d42440a70d5bdb718eb12c627708af81af08607fe01ae63a4732880cf0dbe75175007ce001")
 
     })
 })
